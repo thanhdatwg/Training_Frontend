@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="exercise">
+        <!-- 1. In ra tên và tuổi ở "TÊN", "TUỔI" -->
+         <p>VueJS training - TÊN (TUỔI): {{name}}({{age}})</p>
+         
+         <!-- 2. In ra tuổi đã nhân 3 giá trị -->
+         <p>{{age_3()}}</p>
+         
+         <!-- 3. Gọi 1 hàm để in ra 1 số random từ 0-1 -->
+         <p>{{numberRandom()}}</p>
+         
+         <!-- 4. Tìm 1 ảnh trên google và đưa link của ảnh đó vào attribute src của thẻ img sử dụng binding của vue -->
+         <div>
+             <img style="width:100px;height:100px" v-bind:src="link">
+         </div>
+         
+         <!-- 5. Truyền vào giá trị cho attribute value của input sử dụng binding của Vue dưới đây -->
+         <div>
+             <input v-bind:value="message" type="text">
+         </div>
+         
+         <!-- 6. Sử dụng v-model để bind dữ liệu 2 chiều cho input dưới đây -->
+         <div>
+           <input v-model="message" type="text">
+         </div>
+         
+         <!-- Khi bấm nút dưới. Alert đã bấm nút -->
+         <button v-on:click="Click()">Alert</button>
+    </div>
+<script src="ex1.js"></script>
+</body>
+</html>

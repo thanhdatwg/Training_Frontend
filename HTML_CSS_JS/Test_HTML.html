@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML_CSS_B4_JS</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="Test_CSS.css">
+  </head>
+  <body>
+
+    <div class="registration-form form">
+        <form method="get">
+            <div class="form-group">
+                <input class="form-control item" type="text" id="firstname" maxlength="5" minlength="3" required placeholder="FirstName" onblur="myFunction()"> <!--required : trường bắt buộc--> <!--onblur : events sau khi di chuột ra khỏi vị trí input sẽ xử lý theo hàm myFunction -->
+                FirstName : <label  id="result"></label>
+            </div>
+            <div class="form-group">
+                <input class="form-control item" type="text" name="lastname" maxlength="10" minlength="3" required placeholder="LastName"    onblur="myFunction()">
+                LastName : <label  id="result"></label>
+            </div>
+            <div class="form-group">
+                <input class="form-control item" type="number" name="age" min="0" max="120" required placeholder="AGE" onblur="myFunction()">
+                AGE : <label id="result"></label>
+            </div>
+            <div class="form-group">
+                <input class="form-control item" type="number" name="phone" value="09090808065" disabled placeholder="Phone" onblur="myFunction()">  
+                 <!--disabled : không thay đổi được dữ liệu-->
+                Phone : <label id="result"></label>
+            </div>
+            <div class="form-group">
+                <input class="form-control item" type="date" name="date" value="2019-03-09" onblur="myFunction()">
+                Date : <label id="result"></label>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block create-account" type="submit" id="submit">SAVE</button>
+            </div>
+        </form>
+    </div> 
+    <script src="Test_JS.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+.form{
+    margin-top: 40px;
+    #submit{
+        font-size: 20px;
+        background-color: $color_submit;
+        border: 1px solid $color_border;
+        border-radius:10px;
+        transition: 0.4s;   
+        cursor: pointer;
+    }
+    #submit:hover{
+        background-image: -webkit-linear-gradient(left,$color_black 0%,  $color_transcale1 50%,$color_transcale2 100%);
+    }
+}

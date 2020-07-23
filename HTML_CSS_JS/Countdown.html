@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+      <!-- cách khai báo event trong vuejs : click , ... -->
+      <!-- event v-on  -->
+    <div id="app">
+        <h1>Count : {{ count }}</h1>
+        <button v-on:click="handleClick(5)">Click</button>
+        <div class="box" style="width:100px;height: 100px;background-color: red;position: relative;" v-on:mousemove="handleMouse">
+            <p>{{x}}</p>
+            <p>{{y}}</p>
+            <div class="box-2" style="width:30px;height: 30px;background-color: blue;position: absolute;top:0px;right: 0px;" v-on:mousemove.stop="handleMouseChild">
+
+            </div>
+        </div>
+        <form action="" v-on:submit.prevent="handleSubmit"> 
+            <!-- action : để di chuyển đến tab khác  -->
+            <label for="">User</label>
+            <input type="text"> <br>
+            <label for="">PassWord</label>
+            <input type="passWord"> <br>
+            <input type="submit">
+
+        </form>
+    </div>
+
+
+
+<script src="Countdown.js"></script>
+</body>
+</html>

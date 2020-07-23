@@ -1,0 +1,17 @@
+.form {
+  margin-top: 40px;
+}
+
+.form #submit {
+  font-size: 20px;
+  background-color: #6997d3;
+  border: 1px solid #635353;
+  border-radius: 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.form #submit:hover {
+  background-image: -webkit-linear-gradient(left, black 0%, #b0b0c700 50%, #6971be 100%);
+}
+/*# sourceMappingURL=Test_CSS.css.map */

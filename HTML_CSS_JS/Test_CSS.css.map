@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,KAAK,CAAA;EACD,UAAU,EAAE,IAAI;CAWnB;;AAZD,AAEI,KAFC,CAED,OAAO,CAAA;EACH,SAAS,EAAE,IAAI;EACf,gBAAgB,EDJR,OAAkB;ECK1B,MAAM,EAAE,GAAG,CAAC,KAAK,CDHT,OAAO;ECIf,aAAa,EAAC,IAAI;EAClB,UAAU,EAAE,IAAI;CACnB;;AARL,AASI,KATC,CASD,OAAO,AAAA,MAAM,CAAA;EACT,gBAAgB,EAAE,oEAA4F;CACjH",
+    "sources": [
+        "Test_CSS.scss",
+        "_form.scss"
+    ],
+    "names": [],
+    "file": "Test_CSS.css"
+}

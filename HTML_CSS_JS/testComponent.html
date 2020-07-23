@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+    </div>
+
+    <!-- ======================================= -->
+
+    <div id="app_2">
+        <blog-title title="Ví Dụ 1 Về props"></blog-title>
+        <blog-title title="Ví Dụ 2 Về props"></blog-title>
+        <blog-title title="Ví Dụ 3 Về props"></blog-title>
+    </div>
+    
+    <!-- ======================================== -->
+
+    <div id="app_3">
+        <blog-post v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title" v-bind:id="post.id"></blog-post>
+        <!-- khi sử dụng v-for thì nên sd key  -->        
+        <div v-for="post in posts" v-html="post.content"></div>
+    </div>
+
+    <!-- =======Ví dụ về phóng to cỡ chữ ==================== -->
+    <!-- hướng xử lý : tạo ra một sự kiện ở button rồi lắng nghe sự kiện này bằng v-on -->
+    <div id="app_4">
+        <div :style="{ fontSize: postFontSize + 'px' }">
+            <blog-post-2 v-on:enlarge-text="postFontSize += $event"
+              v-for="post in posts"
+              v-bind:key="post.id"
+              v-bind:post="post"
+            ></blog-post-2>
+          </div>
+    </div>
+    <br>
+    <!-- ============================================ -->
+
+    <div id="app_5">
+        <alert-box>Sử dụng slot</alert-box>
+    </div>
+
+    <br>
+    <br>
+    <!-- ============================================ -->
+
+    <div id="dynamic-component-demo" class="demo">
+        <button
+        v-for="tab in tabs" v-bind:key="tab.key"
+        v-on:click="currentTabKey = tab.key">
+        {{ tab.label }}
+    </button>
+    <component v-bind:is="currentTabComponent"></component>
+    </div>
+    <!-- ================================================================ -->
+
+    <div id="app_6">
+    </div>
+ 
+    <script src="testComponent.js"></script>
+</body>
+</html>

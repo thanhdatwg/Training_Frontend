@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app_1">  
+        <span v-if="seen">IF_ELSE</span>  <!--if/else-->
+    </div>
+
+    <div id="app_2">
+        <ul>
+            <li v-for="todo in todos">  <!--for-->
+                {{ todo.text }}
+            </li>
+        </ul>
+    </div>
+
+    <div id="app_3">
+        <p>{{ message }}</p>
+        <button v-on:click="Click_function">Click</button>
+    </div>
+
+    <div id="app_4">
+        <p> {{message}} </p>
+        <input type="text" v-model="message">
+    </div>
+
+    <div id="component">  <!--component-->
+        <button-counter></button-counter>
+    </div>
+
+    <div id="app_5">
+        <p v-bind:class="{active: isActive}">OOOOOOO</p>  <!--thêm class-->
+    </div>
+
+    <div id="app_6">   <!--v-bind:class : sd component-->
+        <my-component></my-component>
+    </div>
+
+    <div id="app_7">    <!--v-bind:style : sd component-->
+        <style-component></style-component>
+    </div>
+
+    <!-- v-if & v-else -->
+    <div id="app_8">
+        <div v-if="message" >
+            <h1>Anh chàng chăn lợn</h1>
+            <p>Ơ này, Augustin thân mến ơi</p>
+            <p>Mọi việc đều như ý, như ý, như ý</p>
+        </div>
+        <div v-else>
+            <h1>Day la v-else</h1>
+        </div>
+    </div>
+
+                <!-- v-for -->
+    <ul id="app_9">
+        <li v-for="(item, index) in items" v-bind:key="item.id"> <!--có thể thay in = of ; v-bind:key : để khởi tạo key-->
+            {{index}}  -  {{item.age}} - {{item.id}} <!--index là chỉ số-->
+        </li>
+    </ul>
+
+    <div id="exercise">
+        <button v-on:click="Click2_function()">Change show state</button>
+
+          <div v-if="message">Chỉ nhìn thấy thẻ này</div>
+          <div v-else>...hoặc thẻ nàyy</div>       
+          
+          <div v-show="message">Chỉ nhìn thấy thẻ này</div>
+          <div v-show="!message">...hoặc thẻ nàyy</div>
+    </div>
+    <br>
+    <div id="exercise1">
+        <div>{{value}}</div>
+        
+        <!-- Đổi giá trị của value khi bấm nút dưới -->
+        <button v-on:click="click_function">Change value</button>
+    </div>
+
+    <div id="app_12">
+        <exercise></exercise>
+    </div>
+
+    <!-- checkbox đơn  -->
+    <div  id="checkbox">
+        <input type="checkbox" v-model="checked">
+        <label>{{ checked }}</label>
+    </div>
+
+    
+
+
+    <script src="new.js"></script>
+</body>
+</html>
