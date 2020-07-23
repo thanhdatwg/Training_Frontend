@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <!-- <componentHeader v-on:getData="app=$event"/> -->
-    <!-- <component-footer v-bind:title="msg"/> -->
-    <!-- <Component-listUser v-bind:listUser="listUser"/> -->
-    <!-- <h1>{{app}}</h1> -->
+    <componentHeader v-on:getData="app=$event"/>
+    <component-footer v-bind:title="msg"/>
+    <Component-listUser v-bind:listUser="listUser"/>
+    <h1>{{app}}</h1>
     <h1>{{result}}</h1>
     <h2>{{value}}</h2>
     <h1>{{tenResult}}</h1>
     <h1>{{nameResult}}</h1>
     <hr>
-    <h1>{{incrementComputed}}</h1>
+    <button @click="decrement">Decrease</button>
     <button @click="increment">Increase</button>
     
 
@@ -22,6 +22,8 @@ import ComponentFooter from './components/CompFooter.vue'
 import ComponentListUser from './components/ListUser.vue'
 import { mapState } from 'vuex'
 import { mapGetters } from 'vuex'
+// import { mapMutations } from 'vuex'
+import { mapActions } from 'vuex'
 export default {
   name: 'app',
   data () {
@@ -46,18 +48,10 @@ export default {
   computed: {
     ...mapState(["result","value"]),
     ...mapGetters(["tenResult", "nameResult"]),
-    incrementComputed(){
-      return this.result+20
-    }
-    // decrement(){
-    //   return this.$store.commit('decrementOp')
-    // }
 
   },
   methods: {
-    increment(){
-      this.$store.commit('incrementOp', 10)
-    }
+    ...mapActions(["increment","decrement"])
   }
 }
 </script>

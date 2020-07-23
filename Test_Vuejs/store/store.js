@@ -9,12 +9,13 @@ export const store = new Vuex.Store({
       value: "gia tri cua result : "
     }, 
     mutations:{
-        incrementOp(state,n) {
-            state.result += n 
+        incrementOp(state) {
+            state.result += 2
         },
-        // decrementOp(state,n) {
-        //     state.result++
-        // }
+        decrementOp(state) {
+            state.result -= 2
+        }
+
     },
     getters:{ 
         tenResult: state => {
@@ -25,8 +26,17 @@ export const store = new Vuex.Store({
         }
     },
     actions:{
-
+        increment: ({commit}) => {
+            setTimeout(() => {
+                commit('incrementOp')
+            },2000)
+           
+        },
+        decrement: ({commit}) => {
+            commit('decrementOp')
+        }
     },
+    
     modules:{
 
     }
